@@ -12,20 +12,12 @@ new Question("Which language is used for styling web pages?", ["HTML", "JQuery",
 new Question("What has not been covered in PUI lab?", ["HTML", "CSS","Javascript", "Java"], "Java"),
 ];
 
-new Question("Hyper Text Markup Language Stand For?", ["JavaScript", "XHTML","CSS", "HTML"], "HTML")
+
 
 class Quiz {
     constructor(questions) {
       this.score = 0;
-  this.questions = questions;
-      this.questionIndex = 0;
-}
-}
-
-class Quiz {
-    constructor(questions) {
-      this.score = 0;
-  this.questions = questions;
+      this.questions = questions;
       this.questionIndex = 0;
     }
 
@@ -35,20 +27,21 @@ class Quiz {
     return this.questions[this.questionIndex];
 
     }
+    isCorrectAnswer(choice){
+      return this.answer === choice;
+    }
 
-}
-
-  isCorrectAnswer(choice){
-         return this.answer === choice;
-        }
-
-  guess(answer) {
+    guess(answer) {
     if(this.getQuestion().isCorrectAnswer(answer)) {
-     this.score++;
-        }
+      this.score++;
+    }
 
     this.questionIndex++;
+    }
+
 }
+
+
 
 function guess(id, guess) {
     var button = document.getElementById(id);
@@ -72,12 +65,16 @@ function populate() {
        guess("btn" + i, choices[i]);
      }
 
-
+     for (var i = 0; i <10; i++){
+      console.log(i);
+    }
 };
 
-for (var i = 0; i <10; i++){
-  console.log(i);
-}
+var quiz = new Quiz(questions);
+populate();
+
+
+
 
 
 
