@@ -4,6 +4,9 @@ class Question {
     this.choices = choices;
     this.answer = answer;
 }
+    isCorrectAnswer(choice){
+      return this.answer === choice;
+    }
 }
 
 var questions = [
@@ -21,14 +24,8 @@ class Quiz {
       this.questionIndex = 0;
     }
 
-
     getQuestion() {
-
-    return this.questions[this.questionIndex];
-
-    }
-    isCorrectAnswer(choice){
-      return this.answer === choice;
+      return this.questions[this.questionIndex];
     }
 
     guess(answer) {
@@ -39,9 +36,11 @@ class Quiz {
     this.questionIndex++;
     }
 
+      isEnded() {
+  return this.questionIndex === this.questions.length;
 }
 
-
+}
 
 function guess(id, guess) {
     var button = document.getElementById(id);
@@ -53,22 +52,31 @@ function guess(id, guess) {
 
 
 function populate() {
+  if(quiz.isEnded()) {
+      showScores();
+  }
+  else {
 
-     var element = document.getElementById("question");
-     element.innerHTML = quiz.getQuestion().text;
+      var element = document.getElementById("question");
+      element.innerHTML = quiz.getQuestion().text;
 
-     // show options
-     var choices = quiz.getQuestion().choices;
-     for(var i = 0; i < choices.length; i++) {
-       var element = document.getElementById("choice" + i);
-       element.innerHTML = choices[i];
-       guess("btn" + i, choices[i]);
-     }
+      var choices = quiz.getQuestion().choices;
+      for(var i = 0; i < choices.length; i++) {
+          var element = document.getElementById("choice" + i);
+          element.innerHTML = choices[i];
+          guess("btn" + i, choices[i]);
+      }
 
-     for (var i = 0; i <10; i++){
-      console.log(i);
-    }
+  }
 };
+
+function showScores() {
+  var gameOverHTML = "<h1>Result</h1>";
+  gameOverHTML += "<h2 id='score'> Your scores: " + quiz.score + "</h2>";
+  var element = document.getElementById("quiz");
+  element.innerHTML = gameOverHTML;
+};
+
 
 var quiz = new Quiz(questions);
 populate();
