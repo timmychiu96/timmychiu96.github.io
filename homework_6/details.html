@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel='stylesheet' type='text/css' href='style.css'>
+        <!-- javascript -->
+    <script src="main.js" type="text/javascript"></script>
+            <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Aguafina Script' rel='stylesheet'>
+</head>
+
+<!-- navigation bar -->
+    <ul>
+      <li><a href="index.html" class="navitem">Home</a></li>
+      <li><a href="product.html" class="navitem">Menu</a></li>
+      <li><a class="navitem">About</a></li>
+      <li><a class="navitem">Profile</a></li>
+      <li><a href="help.html" class="navitem">Help</a></li>
+      <li><a class="navitem"> Cart (0)</a></li> <!-- <img src="images/shopping-cart.png" class="icon"> -->
+    </ul>
+    <body>
+
+<!-- images for current product -->
+      <div class="griddetail">
+        <div class="box">
+          <img src="images/bun6.jpg">
+        </div>
+        <div class="box">
+          <img src="images/bun5.jpg">
+        </div>
+        <div class="boxmain">
+          <img src="images/bun.jpg">
+        </div>
+      </div>
+
+      <!-- images for suggested products -->
+      <h4 class="suggestTitle">You might also like...</h4>
+      <div class="gridsuggest">
+        <div class="box">
+          <img src="images/bun5.jpg">
+          <h2 class="suggestText">Pumpkin Style</h2>
+        </div>
+        <div class="box">
+          <img src="images/bun2.jpg">
+          <h2 class="suggestText">Blueberry</h2>
+        </div>
+        <div class="box">
+          <img src="images/bun5.jpg">
+          <h2 class="suggestText">Walnut</h2>
+        </div>
+        <div class="box">
+          <img src="images/bun2.jpg">
+          <h2 class="suggestText">Caramel Pecan</h2>
+        </div>
+      </div>
+
+<!-- glazing boxes -->
+      <h4 class="productTitle">Original</h4>
+      <p>$3.00 x 6 = $18.00</p>
+      <h4 class="glazingTitle">Glazing</h4>
+      <div class="gridglaze">
+        <div class="boxglaze">
+          <h3>None</h3>
+        </div>
+        <div class="boxglaze">
+          <h3>Sugar Milk</h3>
+        </div>
+        <div class="boxglaze">
+          <h3>Vanilla Milk</h3>
+        </div>
+        <div class="boxglaze">
+          <h3>Double Chocolate</h3>
+        </div>
+      </div>
+
+<!-- quantity boxes -->
+      <h4 class="quantTitle">Quantity</h4>
+      <div class="gridquant">
+        <div class="boxquant">
+          <h3>1</h3>
+        </div>
+        <div class="boxquant">
+          <h3>3</h3>
+        </div>
+        <div class="boxquant">
+          <h3>6</h3>
+        </div>
+        <div class="boxquant">
+          <h3>12</h3>
+        </div>
+      </div>
+
+<!-- buttons for back/add to cart -->
+      <button onclick="window.location.href ='product.html';" class="backbutton">BACK</button>
+      <button onclick="addItem() ='product.html';" class="addbutton">ADD TO CART</button>
+    </body>
+</html>
