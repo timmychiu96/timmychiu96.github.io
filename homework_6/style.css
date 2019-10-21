@@ -65,6 +65,10 @@ h4{
     font-family: 'Aguafina Script';
 }
 
+h5{
+    text-align: center;
+}
+
 p{
     font-size: 1vw;
     color: dimgray;
@@ -72,8 +76,20 @@ p{
     font-family: 'Aguafina Script';
 }
 
+select {
+    font-family: 'Aguafina Script';
+    font-size: 16px;
+    text-align-last: center;
+    text-align: center;
+    width: 150px;
+}
+
 
 /* classes */
+
+.subtotal h5{
+    transform: translateY(500%);
+}
 /* buttons */
 .homebutton{
     display: block;
@@ -167,6 +183,32 @@ p{
 
 /* based on code academy course we did */
 /* boxes and grids */
+.cartsummary {
+    transform: translateY(5vh);
+    height: 90%;
+    width: 90vw;
+    display: grid;
+    padding: 2.5vh 1vw;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 5vh repeat(3, 20vh);
+    grid-gap: 1vh 1vw;
+    border: solid 1px black;
+    margin: auto;
+}
+
+.carttitle {
+    display: block;
+    position: relative;
+    text-align: center;
+}
+
+.itembox{
+    height: 70%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .grid {
     height: 100%;
     width: 98vw;
@@ -228,22 +270,9 @@ p{
     text-align: center;
 }
 
-.boxquant:hover{
+.boxquant.active, .boxquant:hover{
     background-color: black;
     color: white;
-}
-
-.gridquant {
-    position: absolute;
-    height: 6%;
-    width: 15%;
-    display: grid;
-    padding: 1vh 1vw;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 0vh 1vw;
-    top: 55%;
-    left: 70vw;
-    transform: translateX(-50%);
 }
 
 .boxglaze{
@@ -253,23 +282,11 @@ p{
     text-align: center;
 }
 
-.boxglaze:hover{
+.boxglaze.active, .boxglaze:hover{
     background-color: black;
     color: white;
 }
 
-.gridglaze {
-    position: absolute;
-    width: 25vw;
-    display: grid;
-    padding: 1vh 1vw;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(2, 6vh);
-    grid-gap: 1vh 1vw;
-    top: 30%;
-    left: 70.5vw;
-    transform: translateX(-9vw);
-}
 
 /* nav items */
 .navigation {
@@ -330,10 +347,32 @@ p{
     transform: translateY(25%) translateX(-25%);
 }
 
-.suggestText{
-
+.suggestText {
     text-align: center;
 }
+
+
+.flavorselect{
+    padding-left: 5vw;
+    padding-right: 5vw;
+    position: relative;
+    padding-top: 20%;
+}
+
+.glazingselect{
+    padding-left: 5vw;
+    padding-right: 5vw;
+    position: relative;
+    padding-top: 20%;
+}
+
+.quantityselect {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    position: relative;
+    padding-top: 20%;
+}
+
 
 /* IDs */
 #title{
@@ -342,4 +381,30 @@ p{
     font-size: 6vh;
     color: white;
     padding: 7.5vh 0px 0vh 2vw;
+}
+
+#gridquant {
+    position: absolute;
+    height: 6%;
+    width: 15%;
+    display: grid;
+    padding: 1vh 1vw;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 0vh 1vw;
+    top: 55%;
+    left: 70vw;
+    transform: translateX(-50%);
+}
+
+#gridglaze {
+    position: absolute;
+    width: 25vw;
+    display: grid;
+    padding: 1vh 1vw;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 6vh);
+    grid-gap: 1vh 1vw;
+    top: 30%;
+    left: 70.5vw;
+    transform: translateX(-9vw);
 }

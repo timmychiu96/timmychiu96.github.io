@@ -16,7 +16,7 @@
       <li><a class="navitem">About</a></li>
       <li><a class="navitem">Profile</a></li>
       <li><a href="help.html" class="navitem">Help</a></li>
-      <li><a class="navitem"> Cart (0)</a></li> <!-- <img src="images/shopping-cart.png" class="icon"> -->
+      <li><a href="cart.html" class="navitem" id ="cart"> Cart (0)</a></li>
     </ul>
     <body>
 
@@ -56,10 +56,10 @@
 
 <!-- glazing boxes -->
       <h4 class="productTitle">Original</h4>
-      <p>$3.00 x 6 = $18.00</p>
+      <p id="price"></p>
       <h4 class="glazingTitle">Glazing</h4>
-      <div class="gridglaze">
-        <div class="boxglaze">
+      <div id="gridglaze">
+        <div class="boxglaze active">
           <h3>None</h3>
         </div>
         <div class="boxglaze">
@@ -75,23 +75,23 @@
 
 <!-- quantity boxes -->
       <h4 class="quantTitle">Quantity</h4>
-      <div class="gridquant">
-        <div class="boxquant">
+      <div id="gridquant">
+        <div onclick="setQuant(1)" class="boxquant active">
           <h3>1</h3>
         </div>
-        <div class="boxquant">
+        <div onclick="setQuant(3)" class="boxquant">
           <h3>3</h3>
         </div>
-        <div class="boxquant">
+        <div onclick="setQuant(6)" class="boxquant">
           <h3>6</h3>
         </div>
-        <div class="boxquant">
+        <div onclick="setQuant(12)" class="boxquant">
           <h3>12</h3>
         </div>
       </div>
 
 <!-- buttons for back/add to cart -->
       <button onclick="window.location.href ='product.html';" class="backbutton">BACK</button>
-      <button onclick="addItem() ='product.html';" class="addbutton">ADD TO CART</button>
+      <button onclick="addItem() ='product.html'; orderCount()" class="addbutton">ADD TO CART</button>
     </body>
 </html>
