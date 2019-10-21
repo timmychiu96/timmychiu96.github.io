@@ -329,10 +329,6 @@ select {
     transform: translateY(67vh) translateX(21vw);
 }
 
-.productTitle{
-    transform: translateY(0vh) translateX(62vw);
-}
-
 .glazingTitle{
     transform: translateY(3vh) translateX(62vw);
 }
@@ -407,4 +403,8 @@ select {
     top: 30%;
     left: 70.5vw;
     transform: translateX(-9vw);
+}
+
+#productTitle{
+    transform: translateY(0vh) translateX(62vw);
 }

@@ -3,7 +3,7 @@
 <head>
     <link rel='stylesheet' type='text/css' href='style.css'>
         <!-- javascript -->
-    <script src="main.js" type="text/javascript"></script>
+    <script src="details.js" type="text/javascript"></script>
             <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Aguafina Script' rel='stylesheet'>
@@ -16,7 +16,7 @@
       <li><a class="navitem">About</a></li>
       <li><a class="navitem">Profile</a></li>
       <li><a href="help.html" class="navitem">Help</a></li>
-      <li><a href="cart.html" class="navitem" id ="cart"> Cart (0)</a></li>
+      <li><a href="cart.html" class="navitem" id ="cart"></a></li>
     </ul>
     <body>
 
@@ -55,20 +55,20 @@
       </div>
 
 <!-- glazing boxes -->
-      <h4 class="productTitle">Original</h4>
+      <h4 id="productTitle">Original</h4>
       <p id="price"></p>
       <h4 class="glazingTitle">Glazing</h4>
       <div id="gridglaze">
-        <div class="boxglaze active">
+        <div onclick="setGlaze('None')" class="boxglaze active">
           <h3>None</h3>
         </div>
-        <div class="boxglaze">
+        <div onclick="setGlaze('Sugar Milk')" class="boxglaze">
           <h3>Sugar Milk</h3>
         </div>
-        <div class="boxglaze">
+        <div onclick="setGlaze('Vanilla Milk')" class="boxglaze">
           <h3>Vanilla Milk</h3>
         </div>
-        <div class="boxglaze">
+        <div onclick="setGlaze('Double Chocolate')" class="boxglaze">
           <h3>Double Chocolate</h3>
         </div>
       </div>
@@ -92,6 +92,6 @@
 
 <!-- buttons for back/add to cart -->
       <button onclick="window.location.href ='product.html';" class="backbutton">BACK</button>
-      <button onclick="addItem() ='product.html'; orderCount()" class="addbutton">ADD TO CART</button>
+      <button onclick="addItem();" class="addbutton">ADD TO CART</button>
     </body>
 </html>
