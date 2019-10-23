@@ -1,0 +1,410 @@
+/* elements */
+/* used this to help with nav bar https://www.w3schools.com/css/css_navbar.asp */
+*{
+    padding: 0px;
+    margin: 0px;
+}
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:visited{
+    color: black;
+}
+
+a:link{
+    color: black;
+}
+
+li {
+    float: left;
+    border-right: 20px;
+}
+
+li:last-child {
+    border-right: none;
+}
+
+li a:hover {
+    background-color: #87C7DB;
+}
+
+body{
+    background-color: #87C7DB;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+/* fonts */
+h2 {
+    font-size: 1.5vw;
+    font-family: 'Aguafina Script';
+}
+
+h3{
+    position: relative;
+    transform: translateY(2vh);
+    font-size: 1vw;
+    font-family: 'Aguafina Script';
+}
+
+h4{
+
+    font-size: 1.6vw;
+    font-family: 'Aguafina Script';
+}
+
+h5{
+    text-align: center;
+}
+
+p{
+    font-size: 1vw;
+    color: dimgray;
+    transform: translateY(0vh) translateX(62vw);
+    font-family: 'Aguafina Script';
+}
+
+select {
+    font-family: 'Aguafina Script';
+    font-size: 16px;
+    text-align-last: center;
+    text-align: center;
+    width: 150px;
+}
+
+
+/* classes */
+
+.subtotal h5{
+    transform: translateY(500%);
+}
+/* buttons */
+.homebutton{
+    display: block;
+    background-color: black;
+    border: 5px solid #87C7DB;
+    padding: 25px;
+    color: white;
+    font-size: 3em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-family:'Roboto';
+}
+
+.homebutton:hover {
+    background-color: #87C7DB;
+    color: black;
+    border: 5px solid black;
+}
+
+
+.helpbutton{
+    display: block;
+    background-color: black;
+    border: 5px solid #87C7DB;
+    padding: 10px;
+    color: white;
+    font-size: 1.3vw;
+    position: absolute;
+    top: 93%;
+    left: 93%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.helpbutton:hover {
+    background-color: #87C7DB;
+    color: black;
+    border: 5px solid black;
+}
+
+.backbutton{
+    display: block;
+    background-color: black;
+    border: 5px solid #87C7DB;
+    padding: 10px 20px;
+    color: white;
+    font-size: 1.3vw;
+    position: absolute;
+    top: 10%;
+    left: 8.5%;
+    transform: translateX(-50%);
+}
+
+.backbutton:hover {
+    background-color: #87C7DB;
+    color: black;
+    border: 5px solid black;
+}
+
+.addbutton{
+    display: block;
+    background-color: black;
+    border: 5px solid #87C7DB;
+    padding: 10px 8.5vw;
+    color: white;
+    font-size: 1.3vw;
+    position: relative;
+    left: 62vw;
+    transform: translateY(37vh);
+}
+
+.addbutton:hover {
+    background-color: #87C7DB;
+    color: black;
+    border: 5px solid black;
+}
+
+.homepage {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("images/homepagebg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.active {
+    background-color: black;
+    color: black;
+}
+
+/* based on code academy course we did */
+/* boxes and grids */
+.cartsummary {
+    transform: translateY(5vh);
+    height: 90%;
+    width: 90vw;
+    display: grid;
+    padding: 2.5vh 1vw;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 5vh repeat(3, 20vh);
+    grid-gap: 1vh 1vw;
+    border: solid 1px black;
+    margin: auto;
+}
+
+.carttitle {
+    display: block;
+    position: relative;
+    text-align: center;
+}
+
+.itembox{
+    height: 70%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid {
+    height: 100%;
+    width: 98vw;
+    display: grid;
+    padding: 1vh 1vw;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(2, 40vh);
+    grid-gap: 1vh 1vw;
+}
+
+.box {
+    background-color: none;
+    color: black;
+    border-radius: 5px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.griddetail {
+    position: absolute;
+    height: 50%;
+    width: 40vw;
+    display: grid;
+    padding: 1vh 1vw;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 30vh);
+    grid-gap: 1vh 1vw;
+    top: 10%;
+    left: 20%;
+}
+
+.gridsuggest {
+    position: absolute;
+    height: 2%;
+    width: 40vw; /* 67vw */
+    display: grid;
+    padding: 1vh 1vw;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1vh 1vw;
+    top: 80%;
+    left: 20%;
+}
+
+.gridsuggest img {
+    height: 50%;
+}
+
+.boxmain{
+    grid-column: span 2;
+    background-color: none;
+    color: black;
+    border-radius: 5px;
+}
+
+.boxquant{
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.boxquant.active, .boxquant:hover{
+    background-color: black;
+    color: white;
+}
+
+.boxglaze{
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.boxglaze.active, .boxglaze:hover{
+    background-color: black;
+    color: white;
+}
+
+
+/* nav items */
+.navigation {
+    width: 100%;
+}
+
+.navitem{
+    display: block;
+    background-color: #FFFFFF;
+    opacity: 0.8;
+    text-align: center;
+    min-width: 16.66vw;
+    padding: 1vw 0px 1vw 0px;
+    font-family: 'Aguafina Script';
+    font-size: 1vw;
+}
+
+.previewimg {
+    display: block;
+    position: relative;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.previewimg:hover{
+    color: white;
+    opacity: 0.5;
+}
+
+.previewimg img{
+    padding-top: 2.5%;
+    height: 100%;
+    width: 70%;
+    border-radius: 150px;
+}
+
+/* titles */
+.suggestTitle{
+    transform: translateY(67vh) translateX(21vw);
+}
+
+.glazingTitle{
+    transform: translateY(3vh) translateX(62vw);
+}
+
+.quantTitle{
+    transform: translateY(23vh) translateX(62vw);
+}
+
+.icon{
+    height:7%;
+    width:7%;
+    transform: translateY(25%) translateX(-25%);
+}
+
+.suggestText {
+    text-align: center;
+}
+
+
+.flavorselect{
+    padding-left: 5vw;
+    padding-right: 5vw;
+    position: relative;
+    padding-top: 20%;
+}
+
+.glazingselect{
+    padding-left: 5vw;
+    padding-right: 5vw;
+    position: relative;
+    padding-top: 20%;
+}
+
+.quantityselect {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    position: relative;
+    padding-top: 20%;
+}
+
+
+/* IDs */
+#title{
+    font-family: 'Aguafina Script';
+    display: block;
+    font-size: 6vh;
+    color: white;
+    padding: 7.5vh 0px 0vh 2vw;
+}
+
+#gridquant {
+    position: absolute;
+    height: 6%;
+    width: 15%;
+    display: grid;
+    padding: 1vh 1vw;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 0vh 1vw;
+    top: 55%;
+    left: 70vw;
+    transform: translateX(-50%);
+}
+
+#gridglaze {
+    position: absolute;
+    width: 25vw;
+    display: grid;
+    padding: 1vh 1vw;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 6vh);
+    grid-gap: 1vh 1vw;
+    top: 30%;
+    left: 70.5vw;
+    transform: translateX(-9vw);
+}
+
+#productTitle{
+    transform: translateY(0vh) translateX(62vw);
+}
