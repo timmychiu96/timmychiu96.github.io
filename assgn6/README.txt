@@ -5,3 +5,4 @@ Notes:
 - Selecting quantity updates subtotal in the details page
 - Buttons show feedback of the glazing selection (visually and stores the value)
 - Buttons show feedback of the quantity selection (visually and stores the value)
+- Using session storage to keep track of cart items because it made more sense than local storage for this assignment (don't need to constantly delete local storage). 
