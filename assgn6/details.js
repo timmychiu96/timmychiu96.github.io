@@ -62,7 +62,6 @@ function bun(flavor, glazing, quantity) {
 
 //set the quantity on click
 function setQuant(quantity){
-    console.log('detailsjs setQuant');
 
     bunOne.quantity = quantity;
     sessionStorage.setItem("bunOne", JSON.stringify(bunOne));
@@ -71,7 +70,6 @@ function setQuant(quantity){
 
 //set the glaze on click
 function setGlaze(glaze){
-    console.log('detailsjs glaze');
 
     bunOne.glazing = glaze;
     sessionStorage.setItem("bunOne", JSON.stringify(bunOne));
@@ -79,7 +77,6 @@ function setGlaze(glaze){
 
 //set the flavor on click and details page title
 function setFlavor(flavor){
-    console.log('detailsjs flavor');
 
     bunOne.flavor = flavor;
     console.log(bunOne);
@@ -109,10 +106,7 @@ function createCart(){
         var currentOrders = JSON.parse(sessionStorage.getItem("orders"));
         orders = currentOrders;
     };
-    console.log("orders");
-    console.log(orders);
     orders.push(bunOne);
-    console.log(orders);
 
     sessionStorage.setItem("orders", JSON.stringify(orders));
 }
