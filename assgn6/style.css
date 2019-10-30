@@ -189,8 +189,8 @@ select {
     width: 90vw;
     display: grid;
     padding: 2.5vh 1vw;
-    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 5vh repeat(3, 20vh);
+    grid-template-columns: 1fr 1fr 1fr 1fr 1.5fr;
+/*    grid-template-rows: 5vh repeat(5, 20vh);*/
     grid-gap: 1vh 1vw;
     border: solid 1px black;
     margin: auto;
@@ -369,6 +369,13 @@ select {
     padding-top: 20%;
 }
 
+.oneorder{
+    padding-top: 12vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    justify-content: space-between;
+    display: flex;
+}
 
 /* IDs */
 #title{

@@ -18,11 +18,8 @@
   <li><a href="cart.html" class="navitem" id ="cart"></a></li>
 </ul>
 
-<body>
+<body onload="loadOrders()">
     <div class="cartsummary">
-        <div class="carttitle">
-            <h2>Item</h2>
-        </div>
         <div class="carttitle">
             <h2>Flavor</h2>
         </div>
@@ -35,42 +32,10 @@
         <div class="carttitle">
             <h2>Subtotal</h2>
         </div>
+    </div>
 
-        <div class=itembox>
-            <img src="images/bun5.jpg">
-            <h5>(6) Original flavor w/ double chocolate glazing<h5>
-        </div>
+    <div id="allorders">
 
-        <div class="flavorselect" >
-            <select>
-                <option value="original">Original</option>
-                <option value="blueberry">Blueberry</option>
-                <option value="walnut">Walnut</option>
-                <option value="originalGF">Original (Gluten Free)</option>
-                <option value="pumpkinstyle">Pumpkin Style</option>
-                <option value="caramelpecan">Caramel Pecan</option>
-            </select>
-        </div>
-        <div class="glazingselect" >
-            <select>
-                <option value="none">None</option>
-                <option value="sugarmilk">Sugar Milk</option>
-                <option value="vanillamilk">Vanilla Milk</option>
-                <option value="doublechoc">Double Chocolate</option>
-            </select>
-        </div>
-        <div class="quantityselect" >
-            <select>
-                <option value="1">1</option>
-                <option value="3">3</option>
-                <option value="6">6</option>
-                <option value="12">12</option>
-            </select>
-        </div>
-        <div class="subtotal">
-            <h5>$18.00<h5>
-            <br><h5>Remove Item</h5>
-        </div>
     </div>
 </body>
 </html>
