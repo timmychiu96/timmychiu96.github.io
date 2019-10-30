@@ -23,8 +23,6 @@ window.addEventListener("load", function(){
     updateCart();
     console.log(bunOne);
     setFlavor(sessionStorage.getItem("bunOne"));
-    // setGlaze(sessionStorage.getItem("bunOne.glazing"));
-    // setQuant(sessionStorage.getItem("bunOne.quantity"));
 
 
 //referenced https://www.w3schools.com/howto/howto_js_active_element.asp
@@ -62,7 +60,7 @@ function bun(flavor, glazing, quantity) {
     this.price = 3;
 }
 
-
+//set the quantity on click
 function setQuant(quantity){
     console.log('detailsjs setQuant');
 
@@ -71,6 +69,7 @@ function setQuant(quantity){
     priceCalc();
 }
 
+//set the glaze on click
 function setGlaze(glaze){
     console.log('detailsjs glaze');
 
@@ -78,6 +77,7 @@ function setGlaze(glaze){
     sessionStorage.setItem("bunOne", JSON.stringify(bunOne));
 }
 
+//set the flavor on click and details page title
 function setFlavor(flavor){
     console.log('detailsjs flavor');
 
@@ -87,19 +87,19 @@ function setFlavor(flavor){
     document.getElementById("productTitle").textContent = "Flavor: " + flavor;
 }
 
+//calculate the price
 function priceCalc(){
     document.getElementById("price").textContent = "$" + bunOne.price + ".00 * " + bunOne.quantity + " = " + "$" + bunOne.price*bunOne.quantity + ".00";
 }
 
+//keep track of # of orders
 function updateCart(){
     var num = JSON.parse(sessionStorage.getItem("orders")).length;
     sessionStorage.setItem("orderCounter", orderCounter);
     document.getElementById("cart").textContent = "Cart (" + num + ")";
-    // bunOne.flavor = sessionStorage.getItem("bunOne.flavor");
-    // bunOne.glazing = sessionStorage.getItem("bunOne.glazing");
-    // bunOne.quantity = sessionStorage.getItem("bunOne.quantity");
 }
 
+//add the bun to the array, get the array if there is something in it
 function createCart(){
     if (JSON.parse(sessionStorage.getItem("orders")) === null) {
         orders = [];
@@ -109,24 +109,10 @@ function createCart(){
         var currentOrders = JSON.parse(sessionStorage.getItem("orders"));
         orders = currentOrders;
     };
-
-
     console.log("orders");
     console.log(orders);
     orders.push(bunOne);
     console.log(orders);
-
-
-    // for (i = 0; i < orders.length; i++){
-    //     console.log('heafs');
-    //     console.log(document.getElementById("cartFlavor").textContent);
-    //     // document.getElementById("cartFlavor").textContent = orders[i].flavor;
-    //     // document.getElementById("cartGlazing").textContent = orders[i].glazing;
-    //     // document.getElementById("cartQuantity").textContent = orders[i].quantity;
-    //     // document.getElementById("cartSubtotal").textContent = '$' + orders[i].quantity * bunOne.price + '.00';
-    //     console.log('test');
-
-    // }
 
     sessionStorage.setItem("orders", JSON.stringify(orders));
 }

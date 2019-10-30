@@ -189,7 +189,7 @@ select {
     width: 90vw;
     display: grid;
     padding: 2.5vh 1vw;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1.5fr;
+    grid-template-columns: 0.9fr 1.2fr 1fr 1.2fr 1.1fr;
 /*    grid-template-rows: 5vh repeat(5, 20vh);*/
     grid-gap: 1vh 1vw;
     border: solid 1px black;
@@ -377,6 +377,18 @@ select {
     display: flex;
 }
 
+.cartFlavor, .cartGlazing, .cartQuantity, .cartSubtotal{
+    width: 10vw;
+    font-family: 'Aguafina Script';
+    font-size: 20px;
+}
+
+.cartRemove{
+    padding-top: auto;
+    color: darkblue;
+}
+
+
 /* IDs */
 #title{
     font-family: 'Aguafina Script';
@@ -414,4 +426,12 @@ select {
 
 #productTitle{
     transform: translateY(0vh) translateX(62vw);
+}
+
+#total{
+    text-align: right;
+    margin-right: 10vw;
+    padding-top: 10vh;
+    font-family: 'Aguafina Script';
+    font-size: 30px;
 }

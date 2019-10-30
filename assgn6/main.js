@@ -7,13 +7,10 @@ if (sessionStorage.getItem("orderCounter") != null){
 
 var bunOne = new bun("Original", "Default Glazing", 1);
 
-// var orders = [];
-
 //do these things after the page loads, otherwise there is no value to get
 window.addEventListener("load", function(){
 
     updateCart();
-    //resetChoices();
 });
 
 
@@ -25,6 +22,8 @@ function bun(flavor, glazing, quantity) {
     this.price = 3;
 }
 
+
+//Update the # of orders in cart
 function updateCart(){
     if (JSON.parse(sessionStorage.getItem("orders")) === null) {
         var orders = [];
@@ -34,19 +33,13 @@ function updateCart(){
     var num = JSON.parse(sessionStorage.getItem("orders")).length;
     sessionStorage.setItem("orderCounter", orderCounter);
     document.getElementById("cart").textContent = "Cart (" + num + ")";
-
-    //bunOne.flavor = JSON.parse(sessionStorage.getItem("bunOne.flavor"));
-    // bunOne.flavor = JSON.parse(sessionStorage.getItem("bunOne.glazing"));
-    // bunOne.flavor = JSON.parse(sessionStorage.getItem("bunOne.quantity"));
-
-    // bunOne.flavor = sessionStorage.getItem("bunOne");
-    // bunOne.glazing = sessionStorage.getItem("bunOne");
-    // bunOne.quantity = sessionStorage.getItem("bunOne");
 }
 
-//displays orders
+//displays orders, retrieve orders if there are objects in there
 function loadOrders(){
     console.log('mainjs onload')
+
+    //check if it is null/empty after deleting orders
     if (JSON.parse(sessionStorage.getItem("orders")) != null && JSON.parse(sessionStorage.getItem("orders")).length > 0 ){
 
     console.log(JSON.parse(sessionStorage.getItem("orders"))[0].flavor)
@@ -60,19 +53,16 @@ function loadOrders(){
         var glazing = JSON.parse(sessionStorage.getItem("orders"))[i].glazing;
         var quantity = JSON.parse(sessionStorage.getItem("orders"))[i].quantity;
         var subtotal = quantity * 3;
+        var totalQuant = quantity * length;
         document.getElementById('allorders').innerHTML += '<div class="oneorder"><span class="cartFlavor">' + flavor
                                                         + '</span><span class="cartGlazing">' + glazing
                                                         + '</span><span class="cartQuantity">' + quantity
                                                         + '</span><span class="cartSubtotal">' + '$' + subtotal + '.00'
-                                                        + '</span><span onclick="removeOrder(this)">' + 'Remove Order'
+                                                        + '</span><span class="cartRemove" onclick="removeOrder(this)">' + 'Remove Order'
                                                         + '</span></div>';
+        calcTotal(totalQuant);
     }
     }
-
-    // document.getElementById("cartFlavor").textContent = bunOne.flavor;
-    // document.getElementById("cartGlazing").textContent = bunOne.glazing;
-    // document.getElementById("cartQuantity").textContent = bunOne.quantity;
-    // document.getElementById("cartSubtotal").textContent = '$' + bunOne.quantity * bunOne.price + '.00';
 }
 
 // //set flavor when user clicks on
@@ -80,7 +70,10 @@ function setFlavor(flavor){
     console.log('mainjs setflavor');
     bunOne.flavor = flavor;
     sessionStorage.setItem("bunOne", flavor);
-    // document.getElementById("productTitle").textContent = "Flavor: " + bunOne.flavor;
+}
+
+function calcTotal(totalQuant){
+    document.getElementById("total").innerHTML = '$' + totalQuant * 3 + '.00';
 }
 
 //https://stackoverflow.com/questions/5913927/get-child-node-index
@@ -95,18 +88,3 @@ function removeOrder(currentOrder){
     sessionStorage.setItem("orders", JSON.stringify(orders));
     location.reload();
 }
-
-// //fake remove, just makes them empty strings
-// function removeOrder(){
-//     document.getElementById("cartFlavor").textContent = "";
-//     document.getElementById("cartGlazing").textContent = "";
-//     document.getElementById("cartQuantity").textContent = "";
-//     document.getElementById("cartSubtotal").textContent = "";
-//     document.getElementById("removeButton").textContent = "";
-// }
-
-// //reset the glazing and quauntity
-// function resetChoices(){
-//         sessionStorage.setItem("bunOne.glazing", 'None');
-//         sessionStorage.setItem("bunOne.quantity", 1);
-// }
