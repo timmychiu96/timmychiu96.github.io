@@ -38,29 +38,29 @@ function updateCart(){
 //displays orders, retrieve orders if there are objects in there
 function loadOrders(){
     console.log('mainjs onload')
-
     //check if it is null/empty after deleting orders
     if (JSON.parse(sessionStorage.getItem("orders")) != null && JSON.parse(sessionStorage.getItem("orders")).length > 0 ){
-
     console.log(JSON.parse(sessionStorage.getItem("orders"))[0].flavor)
 
     var length = JSON.parse(sessionStorage.getItem("orders")).length;
     console.log(length)
 
 //https://stackoverflow.com/questions/584751/inserting-html-into-a-div
+        var total = 0;
     for (i = 0; i < length; i++){
         var flavor = JSON.parse(sessionStorage.getItem("orders"))[i].flavor;
         var glazing = JSON.parse(sessionStorage.getItem("orders"))[i].glazing;
         var quantity = JSON.parse(sessionStorage.getItem("orders"))[i].quantity;
         var subtotal = quantity * 3;
-        var totalQuant = quantity * length;
         document.getElementById('allorders').innerHTML += '<div class="oneorder"><span class="cartFlavor">' + flavor
                                                         + '</span><span class="cartGlazing">' + glazing
                                                         + '</span><span class="cartQuantity">' + quantity
                                                         + '</span><span class="cartSubtotal">' + '$' + subtotal + '.00'
                                                         + '</span><span class="cartRemove" onclick="removeOrder(this)">' + 'Remove Order'
                                                         + '</span></div>';
-        calcTotal(totalQuant);
+        total += subtotal;
+        console.log(total);
+        document.getElementById("total").innerHTML = '$' + total + '.00';
     }
     }
 }
@@ -70,10 +70,6 @@ function setFlavor(flavor){
     console.log('mainjs setflavor');
     bunOne.flavor = flavor;
     sessionStorage.setItem("bunOne", flavor);
-}
-
-function calcTotal(totalQuant){
-    document.getElementById("total").innerHTML = '$' + totalQuant * 3 + '.00';
 }
 
 //https://stackoverflow.com/questions/5913927/get-child-node-index
