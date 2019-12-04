@@ -1,3 +1,42 @@
+
+//typed.js
+$(function(){
+    $(".typed").typed({
+        strings: ["not ok.", "ok."],
+        // Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
+        stringsElement: null,
+        // typing speed
+        typeSpeed: 30,
+        // time before typing starts
+        startDelay: 2000,
+        // backspacing speed
+        backSpeed: 20,
+        // time before backspacing
+        backDelay: 800,
+        // loop
+        loop: true,
+        // false = infinite
+        loopCount: 100,
+        // show cursor
+        showCursor: false,
+        // character for cursor
+        cursorChar: "|",
+        // attribute to type (null == text)
+        attr: null,
+        // either html or text
+        contentType: 'html',
+        // call when done callback function
+        callback: function() {},
+        // starting callback function before each string
+        preStringTyped: function() {},
+        //callback for every typed string
+        onStringTyped: function() {},
+        // callback for reset
+        resetCallback: function() {}
+    });
+});
+
+
 var ml4 = {};
 ml4.opacityIn = [0,1];
 ml4.scaleIn = [0.2, 1];
@@ -204,41 +243,4 @@ anime.timeline({loop: true})
     delay: 1000
   });
 
-
-//typed.js
-$(function(){
-    $(".typed").typed({
-        strings: ["not ok.", "ok."],
-        // Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
-        stringsElement: null,
-        // typing speed
-        typeSpeed: 30,
-        // time before typing starts
-        startDelay: 2000,
-        // backspacing speed
-        backSpeed: 20,
-        // time before backspacing
-        backDelay: 800,
-        // loop
-        loop: true,
-        // false = infinite
-        loopCount: 100,
-        // show cursor
-        showCursor: false,
-        // character for cursor
-        cursorChar: "|",
-        // attribute to type (null == text)
-        attr: null,
-        // either html or text
-        contentType: 'html',
-        // call when done callback function
-        callback: function() {},
-        // starting callback function before each string
-        preStringTyped: function() {},
-        //callback for every typed string
-        onStringTyped: function() {},
-        // callback for reset
-        resetCallback: function() {}
-    });
-});
 
