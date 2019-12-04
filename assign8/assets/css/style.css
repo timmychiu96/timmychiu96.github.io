@@ -1,0 +1,117 @@
+/*!
+ * Start Bootstrap - Full Width Pics (https://startbootstrap.com/template-overviews/full-width-pics)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-full-width-pics/blob/master/LICENSE)
+ */
+body {
+  padding-top: 0px;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    font-size: 5rem;
+    padding-top: 34vh;
+}
+
+.bg-image-full {
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.bannerOne{
+    height: 800px;
+}
+
+/*referenced https://tobiasahlin.com/moving-letters/*/
+.ml13 {
+    color: white;
+    text-align: center;
+    font-size: 1.9em;
+    text-transform: uppercase;
+    padding-top: 600px;
+    letter-spacing: 0.5em;
+    font-weight: 600;
+}
+
+.ml13 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+.ml4 {
+    text-align: center;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 4.5em;
+    color: white;
+}
+.ml4 .letters {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    opacity: 0;
+}
+
+.ml7 {
+    text-align: center;
+    position: relative;
+    font-weight: 900;
+    font-size: 3.7em;
+}
+.ml7 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.2em;
+    padding-right: 0.05em;
+    padding-bottom: 0.1em;
+    overflow: hidden;
+}
+.ml7 .letter {
+    transform-origin: 0 100%;
+    display: inline-block;
+    line-height: 1em;
+}
+
+/*typed.js*/
+
+.typed {
+    color: white;
+    text-align: center;
+/*    font-size: 1.9em;*/
+}
+/*Add custom cursor so it auto inherits font styles*/
+.typed::after {
+    content: '|';
+    display: inline;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+
+/*Removes cursor that comes with typed.js*/
+.typed-cursor{
+   opacity: 0;
+    display: none;
+}
+/*Custom cursor animation*/
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
