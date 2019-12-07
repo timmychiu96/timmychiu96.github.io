@@ -17,20 +17,75 @@
   <link href="assets/css/style.css" rel="stylesheet">
 
 </head>
-
 <body>
 
 <!-- referenced https://startbootstrap.com/templates/full-width-pics/ for the general website -->
 
   <!-- Header - set the background image for the header in the line below -->
   <header class="py-5 bg-image-full bannerOne" style="background-image: url('https://i.imgur.com/egOb5tw.jpg');">
-<!--     <img class="img-fluid d-block mx-auto" src="http://placehold.it/200x200&text=Logo" alt=""> -->
       <h2>
         I am <span class="typed"></span>
       </h2>
   </header>
 
-    <!-- Content section -->
+<!-- referenced https://www.w3schools.com/howto/howto_css_flip_card.asp -->
+<!-- Four flip cards of surprising facts -->
+<!-- Card one -->
+<div class ="row">
+  <div class ="col-lg-3 col-sm-6">
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="https://icon-library.net/images/gun-icon-png/gun-icon-png-6.jpg" alt="guns">
+        </div>
+        <div class="flip-card-back">
+          <h3>Firearms are the most commonly used method of suicide among males (51%)</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Card two -->
+  <div class ="col-lg-3 col-sm-6">
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="https://image.flaticon.com/icons/png/512/44/44386.png" alt="internationalstudents">
+        </div>
+        <div class="flip-card-back">
+          <h3 id="globe">45% of Chinese international students reported symptoms of depression at Yale University. (Compared to the 14.2% of general college students in Amerca.)</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Card three -->
+  <div class ="col-lg-3 col-sm-6">
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="https://image.flaticon.com/icons/png/512/26/26422.png" alt="pillimage">
+        </div>
+        <div class="flip-card-back" id="pill">
+          <h3>80% - 90% of people that seek treatment for depression are treated successfully using therapy and/or medication.</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Card four -->
+  <div class ="col-lg-3 col-sm-6">
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="https://image.flaticon.com/icons/png/512/64/64378.png" alt="elderly">
+        </div>
+        <div class="flip-card-back">
+          <h3>There is one suicide for every estimated 4 suicide attempts in the elderly.</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Small banner with a fact -->
   <section class="py-5">
     <div class="mycontainerTwo">
       <h1 class="ml14">
@@ -42,9 +97,8 @@
     </div>
   </section>
 
-  <!-- Header - set the background image for the header in the line below -->
-  <header class="py-5 bg-image-full bannerOne" style="background-image: url('https://cdn.pixabay.com/photo/2017/09/10/01/10/man-2734073_1280.jpg');">
-<!--     <img class="img-fluid d-block mx-auto" src="http://placehold.it/200x200&text=Logo" alt=""> -->
+<!-- large banner with positive image -->
+  <header class="py-5 bg-image-full bannerOne" style="background-image: url('https://cdn.pixabay.com/photo/2017/07/24/19/22/sunset-2535770_1280.jpg');">
       <h1 class="ml4">
         <span class="letters letters-1">Don't</span>
         <span class="letters letters-2">Stay</span>
@@ -52,8 +106,7 @@
       </h1>
   </header>
 
-
-  <!-- Content section -->
+<!-- Small banner. Surprising fact about anxiety and depression -->
   <section class="py-5">
     <div class="mycontainer">
       <h1 class="ml7">
@@ -65,12 +118,12 @@
   </section>
 
 
-  <!-- Image Section - set the background image for the header in the line below -->
-  <section class="py-5 bg-image-full bannerOne" style="background-image: url('https://www.uib.no/sites/w3.uib.no/files/styles/content_main/public/media/kvinne_angst_0.jpg?itok=2f53sdbl&timestamp=1515060236');">
+<!-- motivational banner -->
+  <section class="py-5 bg-image-full bannerOne" style="background-image: url('https://cdn.pixabay.com/photo/2016/11/14/03/38/achieve-1822503_1280.jpg');">
     <h1 class="ml13">Don't let stigma create self-doubt and shame.</h1>
   </section>
 
-  <!-- Content section -->
+<!-- Small banner with shocking fact -->
   <section class="py-5">
     <div class="mycontainer">
       <h1 class="ml1">
@@ -83,37 +136,27 @@
     </div>
   </section>
 
-  <section class="py-5 bg-image-full bannerOne" style="background-image: url('https://d2ebzu6go672f3.cloudfront.net/media/content/images/Sad-borderline-personality-disorder-Woman-In-Depression-And-Despai-63903205.jpg');">
+<!-- Big banner with motivational image and text -->
+  <section class="py-5 bg-image-full bannerOne" style="background-image: url('https://cdn.pixabay.com/photo/2017/04/26/23/46/morning-2264051_1280.jpg');">
     <h1 class="ml11">
       <span class="text-wrapper">
         <span class="line line1"></span>
-        <span class="letters" id="wipe">Do not equate yourself with your illness.</span>
+        <span class="letters" id="wipe">Do not equate yourself with your illness</span>
       </span>
     </h1>
   </section>
 
-  <!-- Content section -->
-<!--   <section class="py-5">
-    <div class="container">
 
-      <h1>Section Heading</h1>
-      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, suscipit, rerum quos facilis repellat architecto commodi officia atque nemo facere eum non illo voluptatem quae delectus odit vel itaque amet.</p>
-    </div>
-  </section> -->
-
-  <!-- Footer -->
+  <!-- Footer with name and copyright -->
   <footer class="py-5 bg-dark">
     <div class="container">
       <p class="m-0 text-center text-white">Copyright &copy; Timmy Chiu 2019</p>
     </div>
-    <!-- /.container -->
   </footer>
 
   <!-- Bootstrap core JavaScript -->
   <script src="assets/jquery/jquery.min.js"></script>
   <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-
 </body>
 
 <!-- anime.js library and main js file -->
